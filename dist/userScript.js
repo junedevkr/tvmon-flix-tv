@@ -1,4 +1,4 @@
-/* TVMON Flix for TizenBrew v1.0.0 — build.py 로 만든 파일입니다. 직접 고치지 마세요. */
+/* TVMON Flix for TizenBrew v1.0.1 — build.py 로 만든 파일입니다. 직접 고치지 마세요. */
 (function () {
   'use strict';
   if (window.__nfxTvLoaded) return;
