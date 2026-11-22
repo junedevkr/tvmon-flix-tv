@@ -1,0 +1,23 @@
+{
+  "name": "tvmon-flix-tv",
+  "appName": "TVMON Flix",
+  "version": "1.0.0",
+  "description": "티비몬을 넷플릭스풍 화면으로 보여 주는 TizenBrew 모듈(광고는 화면에서만 가림, 리모컨 조작, 이어보기)",
+  "packageType": "mods",
+  "websiteURL": "https://tvmon1.com",
+  "main": "dist/userScript.js",
+  "evaluateScriptOnDocumentStart": true,
+  "keys": [
+    "MediaPlayPause",
+    "MediaPlay",
+    "MediaPause",
+    "MediaStop",
+    "MediaFastForward",
+    "MediaRewind",
+    "MediaTrackNext",
+    "MediaTrackPrevious",
+    "ChannelUp",
+    "ChannelDown"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,53 @@
+/* ================================================================
+   TVMON Flix — 삼성 TV(Tizen) 보정
+   옛 TV 브라우저 엔진(2019년형 이상)에서도 같은 모양이 나오게 한다.
+   ================================================================ */
+
+/* flex 간격(gap) 대신 바깥 여백 */
+#nfx-header, #nfx-header .nfx-nav, .nfx-hero-inner, .nfx-hero-btns, .nfx-hero-dots, .nfx-row-head,
+.nfx-track, .nfx-badges, .nfx-chips, .nfx-pager, .nfx-pl-cover-mid, .nfx-watch-meta, .nfx-watch-btns,
+.nfx-episodes-head, .nfx-episodes-tools { gap: 0 !important; }
+#nfx-header > * + * { margin-left: 28px; }
+#nfx-header .nfx-nav > * + * { margin-left: 22px; }
+.nfx-hero-inner > * + * { margin-left: 40px; }
+.nfx-hero-btns > * { margin: 0 14px 14px 0; }
+.nfx-row-head > * + * { margin-left: 14px; }
+.nfx-track > * + * { margin-left: 8px; }
+.nfx-row.is-rank .nfx-track > * + * { margin-left: 4px; }
+.nfx-badges > * + * { margin-top: 4px; }
+.nfx-chips > *, .nfx-pager > * { margin: 0 8px 8px 0; }
+.nfx-pl-cover-mid > * + * { margin-top: 16px; }
+.nfx-watch-meta > * { margin-right: 10px; }
+.nfx-watch-btns > * { margin: 0 12px 12px 0; }
+.nfx-episodes-tools > * + * { margin-left: 8px; }
+
+/* 가로세로 비율(aspect-ratio) 대신 위쪽 여백 비율 */
+.nfx-card-img { height: 0; padding-top: 150%; }
+.nfx-card-img > img, .nfx-card-img > .nfx-noimg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.nfx-ep-thumb { height: 0; padding-top: 56.25%; }
+.nfx-ep-thumb > img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.nfx-hero-poster { width: auto; }
+
+/* TV 화면(1920×1080)에 맞춘 크기 */
+.nfx-hero { height: 88vh; }
+.nfx-pl-stage { height: 100vh; }
+html.nfx-page-watch #playerArea { max-width: none !important; }
+.nfx-btn { font-size: 22px; padding: 14px 32px; }
+.nfx-card-title { font-size: 16px; }
+.nfx-ep-title { font-size: 20px; }
+.nfx-ep-date { font-size: 16px; }
+.nfx-watch-story { font-size: 20px; }
+.nfx-watch-side p { font-size: 18px; }
+#nfx-header .nfx-nav > a, #nfx-header .nfx-more-menu > button { font-size: 20px; }
+
+/* 리모컨 초점을 잘 보이게 */
+.nfx-card:focus { outline: none; transform: scale(1.12); z-index: 10; }
+.nfx-card:focus .nfx-card-img { box-shadow: 0 0 0 5px #fff, 0 16px 34px rgba(0,0,0,.8); }
+.nfx-btn:focus, .nfx-chip:focus, #nfx-header a:focus, #nfx-header button:focus { outline: 4px solid #fff; outline-offset: 3px; }
+.nfx-ep:focus { outline: 4px solid #fff; outline-offset: -4px; background: #2a2a2a; }
+.nfx-pl-back.is-shown { opacity: .85; pointer-events: auto; }
+
+/* 마우스용 요소는 숨김 */
+.nfx-arrow, .nfx-hero-dots, .nfx-footer, .nfx-ep-mark { display: none !important; }
+.nfx-ep { grid-template-columns: 60px 260px minmax(0, 1fr) !important; }
+.nfx-ep-list { max-height: none; overflow: visible; }
